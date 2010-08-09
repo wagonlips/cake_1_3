@@ -16,5 +16,21 @@ class PostsController extends AppController {
       }
     }
   }
+  function delete($id) {
+    $this->Post->delete($id);
+    $this->Session->setFlash('The post with the id: '.$id.' has been deleted.');
+    $this->redirect(array('action'=>'index'));
+  }
+  function edit($id = null) {
+    $this->Post->id = $id;
+    if (empty($this->data)) {
+      $this->data = $this->Post->read();
+    } else {
+      if ($this->Post->save($this->data)) {
+        $this->Session->setFlash('Your post has been updated.');
+        $this->redirect(array('action' => 'index'));
+      }
+    }
+  }
 }
 ?>

@@ -1,0 +1,5 @@
+cake/libs/view/helpers/session.php: * In your view: `$session->read('Controller.sessKey');`
+cake/libs/view/helpers/session.php: * In your view: `$session->check('Controller.sessKey');`
+cake/libs/view/helpers/session.php: * In your view: `$session->error();`
+cake/libs/view/helpers/session.php: * In your view: $session->flash('somekey');
+cake/tests/cases/libs/cake_session.test.php:		$this->assertTrue($session->started());

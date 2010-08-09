@@ -5,6 +5,9 @@ class Post extends AppModel {
     'title' => array(
       'rule' => 'notEmpty'
     ),
+    'title' => array(
+      'rule' => 'alphaNumeric'
+    ),
     'body' => array(
       'rule' => 'notEmpty'
     )
