@@ -2,14 +2,15 @@
 class TemplatesController extends AppController {
   var $name = 'Templates';
   var $paginate = array(
-    'limit' => 25,
+    'fields' => array('Template.id', 'Template.title', 'Template.created'),
+    'limit' => 5,
     'order' => array(
-      'Template.title' => 'asc'
+      'Template.title' => 'asc',
     )
   );
   function index() {
     $templates = $this->paginate('Template');
-    $this->set('templates', $this->Template->Find('all'));
+    $this->set('templates', $templates);
   }
   function view($id = null) {
     $this->Template->id = $id;
