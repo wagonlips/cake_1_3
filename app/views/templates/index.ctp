@@ -1,8 +1,7 @@
 <!-- File: /app/views/templates/index.ctp -->
 
 <h1>Templates</h1>
-<?php echo $html->link('Add Template',array('action' => 'add'));?>
-<p>Showing Page <?php echo $paginator->counter(); ?> </p>
+<p><?php echo $html->link('Add Template',array('action' => 'add'));?></p>
 <table>
 
 <!-- Here is where we loop through our $templates array, printing out templates info -->

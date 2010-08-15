@@ -1,6 +1,7 @@
 <?php
 class TemplatesController extends AppController {
   var $name = 'Templates';
+  var $helpers = Array('Form', 'Tinymce', 'Colorpicker', 'Hello'); 
   var $paginate = array(
     'fields' => array('Template.id', 'Template.title', 'Template.created'),
     'limit' => 5,
