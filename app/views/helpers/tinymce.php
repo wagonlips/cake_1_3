@@ -20,7 +20,7 @@ class TinyMceHelper extends AppHelper {
     }
     // Ties the options to the field
     $tinyoptions['mode'] = 'exact';
-    $tinyoptions['elements'] = $this->__name($fieldName);
+    $tinyoptions['elements'] = $this->domId($fieldName);
     return $this->Javascript->codeBlock('tinyMCE.init(' . $this->Javascript->object($tinyoptions) . ');');
   }
 
