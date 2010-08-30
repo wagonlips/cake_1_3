@@ -3,14 +3,13 @@
 <?php
 echo $form->create('Template');
 echo $form->input('title');
-echo $form->input('body', array('rows' => '3'));
-echo $hello->sayHello('Snapper');
-echo $tinymce->input('content', null, array(
+echo $tinymce->input('body', null, array(
   'theme'                             => 'advanced',
   'theme_advanced_toolbar_location'   => 'top',
   'theme_advanced_toolbar_align'      => 'left',
   'theme_advanced_statusbar_location' => 'bottom',
 )); 
+echo $hello->sayHello('Snapper');
 /*
 echo $form->input('Model.field', array(
   'type' => 'select', 
