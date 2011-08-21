@@ -4,6 +4,7 @@ class UsersController extends AppController {
   function login() {
   }
   function logout() {
+    $this->Session->setFlash('Logout');
     $this->redirect($this->Auth->logout());
   }
 }
