@@ -26,6 +26,14 @@ class TimecardsController extends AppController {
       }
     }
   }
+  function job() {
+    if (!empty($this->data)) {
+      if ($this->Timecard->save($this->data)) {
+          $this->Session->setFlash('The new job has been saved.');
+          $this->redirect(array('action' => 'index'));
+      }
+    }
+  }
   function delete($id) {
     $this->Timecard->delete($id);
     $this->Session->setFlash('The timecard with the id: '.$id.' has been deleted.');
