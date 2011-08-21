@@ -2,12 +2,12 @@
 class TimecardsController extends AppController {
   var $name = 'Timecards';
   var $helpers = Array('Form'); 
-  var $components = array('Auth');
+  var $components = array('Auth','Session');
   var $paginate = array(
-    'fields' => array('Timecard.id', 'Timecard.entry_date', 'Timecard.created', 'Timecard.entry_time_in', 'entry_time_out', 'entry_job'),
+    'fields' => array('Timecard.id', 'Timecard.date', 'Timecard.created', 'Timecard.time_in', 'time_out', 'job'),
     'limit' => 5,
     'order' => array(
-      'Timecard.entry_date' => 'asc',
+      'Timecard.date' => 'asc',
     )
   );
   function index() {
