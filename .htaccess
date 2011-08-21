@@ -1,3 +1,7 @@
+AuthName "Prove You Are Worthy"
+AuthType Basic
+AuthUserFile /home/daemon2/sekret/passwords
+Require valid-user
 <IfModule mod_rewrite.c>
    RewriteEngine on
    RewriteRule    ^$ app/webroot/    [L]
