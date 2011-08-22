@@ -7,7 +7,7 @@ class JobsController extends AppController {
     'fields' => array('Job.id', 'Job.job'),
     'limit' => 5,
     'order' => array(
-      'Job.date' => 'asc',
+      'Job.id' => 'asc',
     )
   );
   function index() {
@@ -22,6 +22,14 @@ class JobsController extends AppController {
     if (!empty($this->data)) {
       if ($this->Job->save($this->data)) {
           $this->Session->setFlash('Your job has been saved.');
+          $this->redirect(array('action' => 'index'));
+      }
+    }
+  }
+  function job() {
+    if (!empty($this->data)) {
+      if ($this->Job->save($this->data)) {
+          $this->Session->setFlash('The new job has been saved.');
           $this->redirect(array('action' => 'index'));
       }
     }

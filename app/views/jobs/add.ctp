@@ -1,4 +1,4 @@
-<!-- File: /app/views/timecards/addjob.ctp -->  
+<!-- File: /app/views/jobs/add.ctp -->  
 <h1>Add Job</h1>
 <?php
 echo $form->create('Job');

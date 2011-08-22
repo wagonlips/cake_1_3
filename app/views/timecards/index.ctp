@@ -2,7 +2,6 @@
 
 <h1>Timecards</h1>
 <p><?php echo $html->link('Add Timecard',array('action' => 'add'));?></p>
-<p><?php echo $html->link('Add Job',array('action' => 'job'));?></p>
 <table>
 
 <!-- Here is where we loop through our $timecards array, printing out timecards info -->
