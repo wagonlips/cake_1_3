@@ -3,3 +3,5 @@
 /plugins
 /vendors
 /app/webroot/js/tiny_mce/
+/temp
+*.ignore
