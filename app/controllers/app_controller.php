@@ -10,5 +10,11 @@ class AppController extends Controller {
   function isAuthorized() {
       return true;
   }
+  public function beforeRender() {
+      if (!array_key_exists('requested', $this->params)) {
+          $user = $this->Session->read($this->Auth->sessionKey);
+          $this->set(compact('user'));
+      }
+  }
 }
 ?>
