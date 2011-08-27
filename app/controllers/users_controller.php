@@ -3,6 +3,9 @@ class UsersController extends AppController {
 
 	var $name = 'Users';
 
+        function beforeFilter() {
+                $this->Auth->allow('admin_add', 'admin_index');
+        }
 	function index() {
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
@@ -121,5 +124,10 @@ class UsersController extends AppController {
 		$this->Session->setFlash(__('User was not deleted', true));
 		$this->redirect(array('action' => 'index'));
 	}
+        function admin_login() {
+        }
+        function admin_logout() {
+        $this->Redirect($this->Auth->logout());
+        }
 }
 ?>
