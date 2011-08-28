@@ -9,7 +9,6 @@ class AppController extends Controller {
           }
 
   }
-  /*
   function beforeFilter() {
       $admin = Configure::read('Routing.admin');
       if (isset($this->params[$admin]) and $this->params[$admin]) {
@@ -18,7 +17,6 @@ class AppController extends Controller {
           $this->Auth->allow();
       }
   }
-  */
   /*
   function beforeFilter() {
       $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');

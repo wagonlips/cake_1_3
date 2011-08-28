@@ -3,11 +3,9 @@ class UsersController extends AppController {
 
 	var $name = 'Users';
 
-        /*
         function beforeFilter() {
-                $this->Auth->allow('admin_add', 'admin_index');
+        //        $this->Auth->allow('admin_add', 'admin_index');
         }
-        */
 	function index() {
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
@@ -131,7 +129,7 @@ class UsersController extends AppController {
         function admin_login() {
         }
         function admin_logout() {
-        $this->Redirect($this->Auth->logout());
+                $this->Redirect($this->Auth->logout());
         }
 }
 ?>
