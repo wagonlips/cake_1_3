@@ -1,5 +1,10 @@
 <div class="timecards index">
 	<h2><?php __('Timecards');?></h2>
+            <?php pr($auth); 
+if (!empty($user))
+        echo $html->link('Logout', array('controller' => 'Users',
+'action'=>'logout'));  
+            ?>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>

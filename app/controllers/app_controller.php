@@ -1,6 +1,14 @@
 <?php
 class AppController extends Controller {
   var $components = array('Session','Auth');
+  public function beforeRender() {
+     $this->set('auth', $this->Auth->user());
+          if (!array_key_exists('requested', $this->params)) {
+                  $user = $this->Session->read($this->Auth->sessionKey);
+                  $this->set(compact('user'));
+          }
+
+  }
   /*
   function beforeFilter() {
       $admin = Configure::read('Routing.admin');
