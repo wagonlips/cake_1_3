@@ -2,6 +2,7 @@
 class TimecardsController extends AppController {
 
 	var $name = 'Timecards';
+	var $scaffold;
 
 	function index() {
 		$this->Timecard->recursive = 0;
