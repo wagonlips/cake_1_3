@@ -17,7 +17,6 @@ class TimecardsController extends AppController {
 		$this->set('timecard', $this->Timecard->read(null, $id));
 	}
 
-        /*
 	function add() {
 		if (!empty($this->data)) {
 			$this->Timecard->create();
@@ -28,6 +27,8 @@ class TimecardsController extends AppController {
 				$this->Session->setFlash(__('The timecard could not be saved. Please, try again.', true));
 			}
 		}
+                $jobs = $this->Timecard->Job->find('list');
+                $this->set(compact('jobs')); 
 	}
 
 	function edit($id = null) {
@@ -46,6 +47,8 @@ class TimecardsController extends AppController {
 		if (empty($this->data)) {
 			$this->data = $this->Timecard->read(null, $id);
 		}
+                $jobs = $this->Timecard->Job->find('list');
+                $this->set(compact('jobs')); 
 	}
 
 	function delete($id = null) {
@@ -60,7 +63,7 @@ class TimecardsController extends AppController {
 		$this->Session->setFlash(__('Timecard was not deleted', true));
 		$this->redirect(array('action' => 'index'));
 	}
-        */
+        /*
 	function admin_index() {
 		$this->Timecard->recursive = 0;
 		$this->set('timecards', $this->paginate());
@@ -116,5 +119,6 @@ class TimecardsController extends AppController {
 		$this->Session->setFlash(__('Timecard was not deleted', true));
 		$this->redirect(array('action' => 'index'));
 	}
+        */
 }
 ?>

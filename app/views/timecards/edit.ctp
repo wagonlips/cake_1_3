@@ -3,11 +3,10 @@
 	<fieldset>
  		<legend><?php __('Edit Timecard'); ?></legend>
 	<?php
-		echo $this->Form->input('id');
 		echo $this->Form->input('date');
 		echo $this->Form->input('time_in');
 		echo $this->Form->input('time_out');
-		echo $this->Form->input('job');
+                echo $this->Form->input('job');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>

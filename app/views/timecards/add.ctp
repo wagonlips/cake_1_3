@@ -6,7 +6,7 @@
 		echo $this->Form->input('date');
 		echo $this->Form->input('time_in');
 		echo $this->Form->input('time_out');
-		echo $this->Form->input('job');
+                echo $this->Form->input('job');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
