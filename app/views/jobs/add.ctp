@@ -1,7 +1,7 @@
 <div class="jobs form">
 <?php echo $this->Form->create('Job');?>
 	<fieldset>
- 		<legend><?php __('Admin Add Job'); ?></legend>
+ 		<legend><?php __('Add Job'); ?></legend>
 	<?php
 		echo $this->Form->input('job');
 	?>

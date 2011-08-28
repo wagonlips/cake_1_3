@@ -1,5 +1,6 @@
 <?php
 class AppController extends Controller {
+  /*
   var $components = array('Session','Auth');
   public function beforeRender() {
      $this->set('auth', $this->Auth->user());
@@ -17,6 +18,7 @@ class AppController extends Controller {
           $this->Auth->allow();
       }
   }
+  */
   /*
   function beforeFilter() {
       $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');

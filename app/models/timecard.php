@@ -7,7 +7,10 @@ class Timecard extends AppModel {
 	var $hasOne = array(
 		'Job' => array(
 			'className' => 'Job',
-			'foreignKey' => 'id'
+			'foreignKey' => 'id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 }

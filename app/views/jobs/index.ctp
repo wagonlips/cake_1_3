@@ -16,7 +16,7 @@
 	?>
 	<tr<?php echo $class;?>>
 		<td>
-			<?php echo $this->Html->link($job['Timecards']['id'], array('controller' => 'timecards', 'action' => 'view', $job['Timecards']['id'])); ?>
+			<?php echo $this->Html->link($job['Timecard']['job'], array('controller' => 'timecards', 'action' => 'view', $job['Timecard']['id'])); ?>
 		</td>
 		<td><?php echo $job['Job']['job']; ?>&nbsp;</td>
 		<td class="actions">
@@ -46,6 +46,6 @@
 	<ul>
 		<li><?php echo $this->Html->link(__('New Job', true), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Timecards', true), array('controller' => 'timecards', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Timecards', true), array('controller' => 'timecards', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Timecard', true), array('controller' => 'timecards', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

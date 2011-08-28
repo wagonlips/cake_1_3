@@ -1,9 +1,9 @@
 <div class="jobs view">
 <h2><?php  __('Job');?></h2>
 	<dl><?php $i = 0; $class = ' class="altrow"';?>
-		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Timecards'); ?></dt>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Timecard'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $this->Html->link($job['Timecards']['id'], array('controller' => 'timecards', 'action' => 'view', $job['Timecards']['id'])); ?>
+			<?php echo $this->Html->link($job['Timecard']['job'], array('controller' => 'timecards', 'action' => 'view', $job['Timecard']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php __('Job'); ?></dt>
@@ -21,6 +21,6 @@
 		<li><?php echo $this->Html->link(__('List Jobs', true), array('action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Job', true), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Timecards', true), array('controller' => 'timecards', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Timecards', true), array('controller' => 'timecards', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Timecard', true), array('controller' => 'timecards', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

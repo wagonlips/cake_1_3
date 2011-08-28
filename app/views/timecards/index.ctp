@@ -1,10 +1,5 @@
 <div class="timecards index">
 	<h2><?php __('Timecards');?></h2>
-            <?php pr($auth); 
-if (!empty($user))
-        echo $html->link('Logout', array('controller' => 'Users',
-'action'=>'logout'));  
-            ?>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
@@ -12,6 +7,8 @@ if (!empty($user))
 			<th><?php echo $this->Paginator->sort('time_in');?></th>
 			<th><?php echo $this->Paginator->sort('time_out');?></th>
 			<th><?php echo $this->Paginator->sort('job');?></th>
+			<th><?php echo $this->Paginator->sort('created');?></th>
+			<th><?php echo $this->Paginator->sort('modified');?></th>
 			<th class="actions"><?php __('Actions');?></th>
 	</tr>
 	<?php
@@ -28,6 +25,8 @@ if (!empty($user))
 		<td><?php echo $timecard['Timecard']['time_in']; ?>&nbsp;</td>
 		<td><?php echo $timecard['Timecard']['time_out']; ?>&nbsp;</td>
 		<td><?php echo $timecard['Timecard']['job']; ?>&nbsp;</td>
+		<td><?php echo $timecard['Timecard']['created']; ?>&nbsp;</td>
+		<td><?php echo $timecard['Timecard']['modified']; ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View', true), array('action' => 'view', $timecard['Timecard']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit', true), array('action' => 'edit', $timecard['Timecard']['id'])); ?>
