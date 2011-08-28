@@ -16,6 +16,7 @@ class GroupsController extends AppController {
 		$this->set('group', $this->Group->read(null, $id));
 	}
 
+        /*
 	function add() {
 		if (!empty($this->data)) {
 			$this->Group->create();
@@ -58,6 +59,7 @@ class GroupsController extends AppController {
 		$this->Session->setFlash(__('Group was not deleted', true));
 		$this->redirect(array('action' => 'index'));
 	}
+        */
 	function admin_index() {
 		$this->Group->recursive = 0;
 		$this->set('groups', $this->paginate());

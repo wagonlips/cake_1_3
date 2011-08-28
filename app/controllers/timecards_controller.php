@@ -16,6 +16,7 @@ class TimecardsController extends AppController {
 		$this->set('timecard', $this->Timecard->read(null, $id));
 	}
 
+        /*
 	function add() {
 		if (!empty($this->data)) {
 			$this->Timecard->create();
@@ -58,6 +59,7 @@ class TimecardsController extends AppController {
 		$this->Session->setFlash(__('Timecard was not deleted', true));
 		$this->redirect(array('action' => 'index'));
 	}
+        */
 	function admin_index() {
 		$this->Timecard->recursive = 0;
 		$this->set('timecards', $this->paginate());

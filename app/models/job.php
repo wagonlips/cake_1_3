@@ -7,10 +7,7 @@ class Job extends AppModel {
 	var $belongsTo = array(
 		'Timecards' => array(
 			'className' => 'Timecards',
-			'foreignKey' => 'id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
+			'foreignKey' => 'id'
 		)
 	);
 }
